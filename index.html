@@ -141,7 +141,7 @@
 
         var maulObj = {
             hp: 145,
-            atk: 8,
+            atk: 6,
             atkScale: 13,
             name: "Darth Maul",
             attack: function(){
@@ -151,9 +151,9 @@
         };
 
         var sidiousObj = {
-            hp: 155,
+            hp: 164,
             atk: 5,
-            atkScale: 12,
+            atkScale: 11,
             name: "Darth Sidious",
 
             attack: function (){
@@ -358,14 +358,14 @@
                 else if (vaderObj.alive)
                     enemyLives = true;
                 //if no enemy is still alive, consider this a win
-                if(!enemyLives){
+                else if(!enemyLives){
                     win();
                     return;
                 }
                 showLivingEnemies();
             }
             if(activeChar.hp < 1 && !won){
-                alert("The enemy has won. They now control the galaxy.");
+                alert("You have been defeated and the enemy has won. They now control the galaxy.");
                 reset();
             }
         }
@@ -385,10 +385,10 @@
             obiObj.atk = 3;
 
             maulObj.hp = 145;
-            maulObj.atk = 8;
+            maulObj.atk = 6;
             
-            sidiousObj.hp = 175;
-            sidiousObj.atk = 7;
+            sidiousObj.hp = 164;
+            sidiousObj.atk = 5;
             
             jarjarObj.hp = 130;
             jarjarObj.alive = true;
